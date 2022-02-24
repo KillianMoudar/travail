@@ -17,3 +17,21 @@ def tirage_au_sort(nom_fichier):
     fichier.close()
     return nettoyage_mot(chaine)
 print(tirage_au_sort('dictionnaire.txt'))
+
+
+
+def deja_choisie(lettre):
+    """
+    Description de la fonction : Ajoute dans LETTRES_DEJA_CHOISIES les lettres choisies par le joueur
+    et affiche un message informant le joueur dans le cas où il choisit une lettre déjà proposée précédemment
+    lettre (str) : lettre proposée par le joueur
+    return (bool) : True si la lettre a déjà été choisié, False sinon
+    MODIFICATION EN PLACE de LETTRES_DEJA_CHOISIES
+    """
+    global LETTRES_DEJA_CHOISIES
+    if lettre in LETTRES_DEJA_CHOISIES:
+        PRINT('lettre déja choisie')
+        return True
+    else:
+        LETTRES_DEJA_CHOISIES = LETTRES_DEJA_CHOISIES + [lettre]
+        return False 
