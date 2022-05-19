@@ -79,14 +79,14 @@ def lecture(nom_fichier):
         return fichier.read()
 
 def occurence ():
-    a = lecture('big_brother.txt')
+    txt = lecture('big_brother.txt')
     occurence = { }
-    chiffre = 0
-    for lettre in a:
-        for nombre in a :
+    ch = 0
+    for lettre in txt:
+        for nombre in txt :
             if nombre == lettre:
-                chiffre = chiffre + 1
-        occurence[lettre] = chiffre
+                ch = ch + 1
+        occurence[lettre] = ch
     return occurence
 
 print(occurence())
